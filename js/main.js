@@ -7,8 +7,6 @@
 
   //functions
   function loadInfoBoxes() {
-    loader.classList.toggle("hidden");
-
     fetch("https://swiftpixel.com/earbud/api/infoboxes")
       .then(response => response.json())
       .then(infoBoxes => {
@@ -26,23 +24,18 @@
           selected.appendChild(titleElement);
           selected.appendChild(textElement);
         });
-
-        loader.classList.toggle("hidden");
       })
       .catch(error => {
         console.log(error);
         const errorMessage = document.createElement("p");
-        errorMessage.textContent = "Welp, something has definitely gone down. You can try again later while we try to see what the problem is. Thank you for your patience!";
+        errorMessage.textContent = "Welp, something has definitely gone wrong. You can try again later while we try to see what the problem is. Thank you for your patience!";
         document.querySelector("#error-message").appendChild(errorMessage);
       });
-      loader.classList.toggle("hidden");
   }
 
   loadInfoBoxes();
 
   function loadMaterialInfo() {
-    loader.classList.toggle("hidden");
-
     fetch("https://swiftpixel.com/earbud/api/materials")
       .then(response => response.json())
       .then(materialListData => {
@@ -62,14 +55,14 @@
           //Append the populated template to the list
           materialList.appendChild(clone);
         });
-        loader.classList.toggle("hidden");
+        loader.classList.add("hidden");
       })
       .catch(error => {
         console.log(error);
         const errorMessage = document.createElement("p");
-        errorMessage.textContent = "Welp, something has definitely gone down. You can try again later while we try to see what the problem is. Thank you for your patience!";
+        errorMessage.textContent = "Welp, something has definitely gone wrong. You can try again later while we try to see what the problem is. Thank you for your patience!";
         materialList.appendChild(errorMessage);
-        loader.classList.toggle("hidden");
+        loader.classList.add("hidden");
       });
   }
 
