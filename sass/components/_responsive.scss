@@ -1,0 +1,29 @@
+// Mobile Static Image - Show on mobile only
+.mobile-static-image {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+}
+
+// Desktop Model - Hidden on mobile, visible on tablet and above
+.desktop-model {
+  display: none;
+}
+
+// Tablet and above - Show model, hide static image
+@media screen and (min-width: 768px) {
+  .mobile-static-image {
+    display: none;
+  }
+
+  .desktop-model {
+    display: block;
+  }
+}

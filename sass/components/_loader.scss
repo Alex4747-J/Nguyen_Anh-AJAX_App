@@ -1,0 +1,56 @@
+// Loading Spinner Styles
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &.hidden {
+    display: none;
+  }
+
+  svg {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+}
+
+// Error Message Styles
+.error-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff4444;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  max-width: 90%;
+  text-align: center;
+
+  &.hidden {
+    display: none;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
